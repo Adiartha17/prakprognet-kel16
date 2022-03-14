@@ -39,7 +39,7 @@
                     <div class="form-group mb-3">
 		            	<label class="label" for="user_name">Nama</label>
                         <input id="user_name" type="text" class="form-control @error('user_name') is-invalid @enderror" name="user_name" value="{{ old('user_name') }}" required autocomplete="user_name" autofocus>
-							@error('name')
+							@error('user_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -57,7 +57,7 @@
                     <div class="form-group mb-3">
 		            	<label class="label" for="password">Password</label>
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-							 @error('password')
+							@error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -77,9 +77,9 @@
                             @enderror
 		            </div>
                     <div class="form-group mb-3">
-		            	<label class="label" for="password">Nomor HP</label>
-                        <input id="telepon" type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon" value="{{ old('telepon') }}" required autocomplete="telepon" autofocus>
-                            @error('name')
+		            	<label class="label" for="telepon">Nomor HP</label>
+                        <input id="telepon" type="text" class="form-control @error('telepon') is-invalid @enderror" name="telepon" value="{{ old('telepon') }}" required autocomplete="telepon"autofocus>
+                            @error('telepon')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
