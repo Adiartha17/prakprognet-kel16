@@ -92,7 +92,17 @@
                                       Rp.{{number_format($item->sub_total)}}
                                   </td>
                                   <td>
-                                      {{$item->status}}
+                                    @if($item->status=='unpaid')
+                                        <span class="badge badge-secondary nav-link">{{$item->status}}</span>
+                                    @elseif($item->status=='unverified')
+                                        <span class="badge badge-warning nav-link">{{$item->status}}</span>
+                                    @elseif($item->status=='verified')
+                                        <span class="badge badge-warning nav-link">{{$item->status}}</span>
+                                    @elseif($item->status=='delivered')
+                                        <span class="badge badge-info nav-link">{{$item->status}}</span>
+                                    @elseif($item->status=='finish')
+                                        <span class="badge badge-success nav-link">{{$item->status}}</span>
+                                    @endif   
                                   </td>
                                   <td>
                                     <a href="{{ Route('transaksi_detail', $item->id) }}">Detail</a>
