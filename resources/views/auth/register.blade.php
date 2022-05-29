@@ -69,8 +69,8 @@
 		            </div>
                     <div class="form-group mb-3">
 		            	<label class="label" for="alamat">Alamat</label>
-                        <textarea id="alamat" type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ old('alamat') }}" required autocomplete="alamat" rows="5" autofocus></textarea>
-							@error('name')
+                        <textarea id="alamat" type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" value="{{ old('alamat') }}" required autocomplete="alamat" rows="5"></textarea>
+							@error('alamat')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

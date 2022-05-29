@@ -35,13 +35,6 @@
                         
                         <div class="card-body">
                             <form method="POST" action="{{ route('password.update') }}">
-                                <script>
-                                    Swal.fire(
-                                    'Good job!',
-                                    'You clicked the button!',
-                                    'success'
-                                    )
-                                </script>
                                 @csrf
         
                                 <input type="hidden" name="token" value="{{ $token }}">
